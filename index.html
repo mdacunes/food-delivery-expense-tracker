@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Delivery Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="upload-box">
+    <h1>Food Delivery Expense Tracker</h1>
+      <span style="font-size: small; text-align: left; font-weight: bolder; color: #ce5374;">Please upload the receipt:</span>
+      <input type="file" id="imageInput" accept="image/*" />
+      <button id="processBtn">Extract Order Details</button>
+    </div>
+
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+      <p>Processing image...</p>
+    </div>
+
+    <!-- <div id="debug"></div> -->
+    <div id="output" class="card hidden"></div>
+    <div id="uploadedImageCard" class="card hidden"></div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
